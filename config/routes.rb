@@ -1,4 +1,7 @@
 Numberten::Application.routes.draw do
+  get 'text_messages/new', to: "text_messages#new"
+  post '/send_message' => "text_messages#send_message" 
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

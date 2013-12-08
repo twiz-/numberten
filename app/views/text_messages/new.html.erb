@@ -1,0 +1,6 @@
+<%= form_for @text_message, url: {action: "send_message"} do |f|%>
+  <%= f.text_field :from, value: "+14158586879"  %>
+  <%= f.text_field :to, value: "+14157059500" %>
+  <%= f.text_area :body %>
+  <%= f.submit "Send Text Message" %>
+<% end %>

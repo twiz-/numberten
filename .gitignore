@@ -7,6 +7,9 @@
 # Ignore bundler config
 /.bundle
 
+#ignore API creds
+/config/app_environment_variables.rb
+
 # Ignore the default SQLite database.
 /db/*.sqlite3
 
