@@ -17,5 +17,7 @@ class TextMessagesController < ApplicationController
      to: "#{number_to_send_to}",
      body: "#{the_payload}"
     )
+    flash[:notice] = "Your text has been sent!"
+    redirect_to action: 'new'
   end
 end
