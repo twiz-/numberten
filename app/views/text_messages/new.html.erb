@@ -12,8 +12,9 @@
       <span>Schedule text for later?</span>
       </a>
     <div class="show-cal">
-      <p>Cecilia, I'm down on my knees come home</p>
+      <br>
+      <%= f.datetime_select :scheduled_date, ampm: true, minute_step: 15 %> <br><br>
     </div>
-    <%= f.submit "Send Text Message", class: "btn btn-success btn-min" %>
+    <%= f.submit "Send Text Message", class: "btn btn-success schedule_text btn-min" %>
   <% end %>
 </div>
