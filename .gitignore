@@ -10,6 +10,15 @@
 #ignore API creds
 /config/app_environment_variables.rb
 
+#operating system nonsense
+app/assets/stylesheets/.DS_Store
+vendor/.DS_Store
+vendor/assets/.DS_Store
+vendor/assets/javascripts/.DS_Store
+.DS_Store
+app/.DS_Store
+app/assets/.DS_Store
+
 # Ignore the default SQLite database.
 /db/*.sqlite3
 
