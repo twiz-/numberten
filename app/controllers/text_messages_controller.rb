@@ -10,7 +10,9 @@ class TextMessagesController < ApplicationController
       if @text_message.scheduled_date == nil
         TwilioWorker.perform_async(@text_message.id)
       elsif @text_message.scheduled_date != nil 
-        TwilioWorker.perform_in(@text_message.scheduled_date, @text_message.id)
+        time = ((@text_message.scheduled_date - @text_message.created_at) / 3600).round
+        TwilioWorker.perform_at(time.hours, @text_message.id)
+        
       else
         p "something happened"
       end
